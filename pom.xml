@@ -18,7 +18,7 @@
         <module>zhuxl-dubbo-provider-api</module>
         <module>zhuxl-dubbo-provider</module>
         <module>zhuxl-dubbo-consumer</module>
-        <module>zhuxl-component-activemq</module>
+        <module>zhuxl-stock-provider</module>
     </modules>
 
     <dependencies>
