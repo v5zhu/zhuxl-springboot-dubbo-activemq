@@ -28,3 +28,4 @@ spring:
     scan:
 queue:
   stock: stock.queue
+  express: express.topic

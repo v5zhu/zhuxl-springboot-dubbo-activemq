@@ -1,7 +1,5 @@
 package com.zhuxl.dubbo.provider.service.impl;
 
-import com.alibaba.fastjson.JSONObject;
-import com.zhuxl.dubbo.provider.api.dto.OrderDTO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +22,8 @@ public class OrderProducerTest {
 
     @Test
     public void bookOrder() {
-        OrderDTO order = new OrderDTO();
-        order.setName("苹果手机iphone 6s");
-        order.setOrderId("mcc2018080212121200010003");
-        orderService.bookOrder(JSONObject.toJSONString(order));
+        for (int i = 0; i < 10; i++) {
+            orderService.bookOrder("message>" + i);
+        }
     }
 }

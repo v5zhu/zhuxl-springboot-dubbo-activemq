@@ -13,7 +13,12 @@ import org.springframework.stereotype.Service;
 public class StockConsumer {
 
     @JmsListener(destination = "stock.queue")
-    public void receiveOrder(String message) {
-        System.out.println("库存系统接收到的订单是:" + message);
+    public void receiveOrderA(String message) {
+        System.out.println("库存系统A接收到的订单是:" + message);
+    }
+
+    @JmsListener(destination = "stock.queue")
+    public void receiveOrderB(String message) {
+        System.out.println("库存系统B接收到的订单是:" + message);
     }
 }

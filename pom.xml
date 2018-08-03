@@ -19,6 +19,7 @@
         <module>zhuxl-dubbo-provider</module>
         <module>zhuxl-dubbo-consumer</module>
         <module>zhuxl-stock-provider</module>
+        <module>zhuxl-express-provider</module>
     </modules>
 
     <dependencies>

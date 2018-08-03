@@ -1,0 +1,9 @@
+server:
+  port: 8866
+#应用名称
+spring:
+  activemq:
+    broker-url: tcp://47.96.28.236:61616
+    in-memory: true
+    pool:
+      enabled: false

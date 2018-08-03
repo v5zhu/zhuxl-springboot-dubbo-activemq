@@ -1,9 +1,6 @@
-package com.zhuxl.dubbo.provider.configuration;
+package com.zhuxl.express.provider.configuration;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
@@ -15,14 +12,8 @@ import org.springframework.jms.config.JmsListenerContainerFactory;
  * @package com.zhuxl.dubbo.provider.configuration
  * @date 2018/8/2 12:35
  */
-@Getter
-@Setter
 @Configuration
-@ConfigurationProperties(prefix = "queue")
-public class QueueConfig {
-    private String stock;
-
-    private String express;
+public class ActivemqConfig {
 
 
     @Bean
