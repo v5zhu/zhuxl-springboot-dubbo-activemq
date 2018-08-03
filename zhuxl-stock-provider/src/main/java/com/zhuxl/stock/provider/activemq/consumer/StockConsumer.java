@@ -16,9 +16,4 @@ public class StockConsumer {
     public void receiveOrderA(String message) {
         System.out.println("库存系统A接收到的订单是:" + message);
     }
-
-    @JmsListener(destination = "stock.queue")
-    public void receiveOrderB(String message) {
-        System.out.println("库存系统B接收到的订单是:" + message);
-    }
 }

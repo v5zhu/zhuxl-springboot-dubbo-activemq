@@ -22,8 +22,14 @@ public class ExpressConsumer {
         System.out.println("骑手B接收到的订单是:" + message);
     }
 
-    @JmsListener(destination = "express.queue", containerFactory = "jmsListenerContainerTopic")
+    @JmsListener(destination = "express.topic", containerFactory = "jmsListenerContainerTopic")
     public void receiveOrderC(String message) {
         System.out.println("骑手C接收到的订单是:" + message);
+    }
+
+
+    @JmsListener(destination = "stock.queue")
+    public void receiveOrderX(String message) {
+        System.out.println("库存系统B接收到的订单是:" + message);
     }
 }

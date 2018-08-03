@@ -1,6 +1,7 @@
 package com.zhuxl.dubbo.consumer.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.alibaba.fastjson.JSONObject;
 import com.zhuxl.dubbo.provider.api.dto.OrderDTO;
 import com.zhuxl.dubbo.provider.api.service.OrderService;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ public class OrderController {
     @PostMapping("book")
     @ResponseBody
     public ResponseEntity bookOrder(@RequestBody OrderDTO orderDTO) {
-        boolean isOk = orderService.bookOrder(orderDTO);
+        boolean isOk = orderService.bookOrder(JSONObject.toJSONString(orderDTO));
         return new ResponseEntity(isOk, HttpStatus.OK);
     }
 }

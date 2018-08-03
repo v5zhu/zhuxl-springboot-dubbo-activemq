@@ -27,8 +27,8 @@ public class OrderProducer {
     }
 
     public void sendToExpress(final String message) {
-        Destination queue = new ActiveMQTopic(queueConfig.getExpress());
-        jmsTemplate.convertAndSend(queue, message);
+        Destination topic = new ActiveMQTopic(queueConfig.getExpress());
+        jmsTemplate.convertAndSend(topic, message);
     }
 
 }

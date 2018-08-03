@@ -22,7 +22,7 @@ public class OrderProducerTest {
 
     @Test
     public void bookOrder() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i <=100; i++) {
             orderService.bookOrder("message>" + i);
         }
     }

@@ -16,27 +16,27 @@ public class OrderServiceImpl implements OrderService {
     public boolean bookOrder(String orderDTO) {
         // 下单完成后发送消息
         // 主线程阻塞2秒模拟下单
-        try {
+        /*try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
         // 发送消息
         orderProducer.sendToStock(orderDTO);
 
         // 主线程阻塞2秒模拟减库存
-        try {
+        /*try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
         orderProducer.sendToExpress(orderDTO);
         // 主线程阻塞2秒模拟发送给各骑手
-        try {
+       /* try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
         return true;
     }
 }
